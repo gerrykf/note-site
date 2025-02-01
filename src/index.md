@@ -4,6 +4,8 @@ layout: home
 
 hero:
   name: "前端笔记官网"
+  image: /logo.png
+  alt: gerry
   text: "前端的笔记官网 记录学习各个栈的过程与心得"
   tagline: My great project tagline
   actions:
