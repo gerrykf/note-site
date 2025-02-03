@@ -3,11 +3,11 @@ import { SearchPlugin } from "vitepress-plugin-search";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/note-site/",
   lang: "zh-CN",
   title: "Gerry前端笔记官网",
   description: "Gerry的前端笔记官网 记录学习各个栈的过程与心得",
   head: head(),
-  base: "/",
   outDir: "dist",
   srcDir: "src",
   themeConfig: {
