@@ -31,7 +31,7 @@ features:
       src: /icon_vue.svg
     title: Vue.js
     details: 轻松建构响应式界面，Vue.js是你的前端开发新选择。
-    link: /frontend/vue
+    link: /frontend/vue/vue
   - icon:
       src: /icon_react.svg
     title: React.js

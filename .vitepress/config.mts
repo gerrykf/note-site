@@ -176,7 +176,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: "Vue",
-          link: "/vue"
+          link: "/vue/vue"
         },
         {
           text: "React",
