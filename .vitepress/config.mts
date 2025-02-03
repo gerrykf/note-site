@@ -192,6 +192,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               link: "/hign-order"
             }
           ]
+        },
+        {
+          text: "Git",
+          link: "/git/deploy"
         }
       ]
     },
