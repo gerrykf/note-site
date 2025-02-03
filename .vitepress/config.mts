@@ -180,14 +180,26 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         },
         {
           text: "React",
-          link: "/react"
+          base: "/frontend/react",
+          collapsed: true,
+          items: [
+            {
+              text: "入门",
+              link: "/guide"
+            },
+            {
+              text: "高阶",
+              link: "/hign-order"
+            }
+          ]
         }
       ]
     },
     {
       text: "项目",
       collapsed: true,
-      base: "/project/",
+      base: "/project",
+      link: "/",
       items: [
         {
           text: "同策好房 ERP",

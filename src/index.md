@@ -37,5 +37,5 @@ features:
       light: /icon_react.svg
     title: React.js
     details: 用于构建用户界面的 JavaScript 库。
-    link: /frontend/react
+    link: /frontend/react/guide
 ---
