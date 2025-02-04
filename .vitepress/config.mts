@@ -77,6 +77,11 @@ export default defineConfig({
         ignore: [] // 这也是一个数组，你可以在这个数组中指定哪些页面不被搜索
       })
     ]
+  },
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
   }
 });
 
@@ -185,7 +190,22 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: "Vue",
-          link: "/vue/vue"
+          base: "/frontend/vue",
+          collapsed: true,
+          items: [
+            {
+              text: "入门",
+              link: "/guide"
+            },
+            {
+              text: "高阶",
+              link: "/hign-order"
+            },
+            {
+              text: "Pinia",
+              link: "/pinia"
+            }
+          ]
         },
         {
           text: "React",
