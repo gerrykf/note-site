@@ -275,6 +275,17 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       base: "/stack/",
       items: [
         {
+          text: "AI大模型",
+          base: "/ai",
+          collapsed: true,
+          items: [
+            {
+              text: "DeepSeek",
+              link: "/install-deepseek"
+            }
+          ]
+        },
+        {
           text: "Node",
           link: "/node"
         }
