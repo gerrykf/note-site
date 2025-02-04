@@ -232,7 +232,29 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         },
         {
           text: "Git",
-          link: "/git/deploy"
+          collapsed: true,
+          base: "/frontend/git",
+          items: [
+            {
+              text: "入门",
+              link: "/guide"
+            },
+            {
+              text: "部署github pages",
+              link: "/deploy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      text: "后端",
+      collapsed: true,
+      base: "/backend",
+      items: [
+        {
+          text: "Node",
+          link: "/node"
         }
       ]
     },
