@@ -25,6 +25,15 @@ export default defineConfig({
       copyright: `版权所有 © 2019-${new Date().getFullYear()} gerry`
     },
 
+    notFound: {
+      title: "页面没有找到",
+      linkLabel: "返回首页",
+      quote:
+        "但如果你不改变你的方向，如果你继续寻找，你可能会在你前进的地方结束。",
+      code: "404",
+      linkText: "返回首页"
+    },
+
     docFooter: {
       prev: "上一页",
       next: "下一页"
