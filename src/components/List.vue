@@ -26,38 +26,39 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { withBase } from 'vitepress';
 
 const features = ref([
     {
         icon: '📓',
         title: '面试题',
         details: '30k+ 前端面试题汇总',
-        link: './interview-fq/vue'
+        link: withBase('/interview-fq/vue')
     },
     {
         icon: {
-            src: './icon_vue.svg'
+            src: withBase('/icon_vue.svg')
         },
         title: 'Vue.js',
         details: '轻松建构响应式界面，Vue.js是你的前端开发新选择。',
-        link: './frontend/vue/vue'
+        link: withBase('/frontend/vue/vue')
     },
     {
         icon: {
-            src: './icon_react.svg'
+            src: withBase('/icon_react.svg')
         },
         title: 'React.js',
         details: '用于构建用户界面的 JavaScript 库。',
-        link: './frontend/react/guide'
+        link: withBase('/frontend/react/guide')
     },
     {
         icon: {
-            src: './icon_git.svg'
+            src: withBase('/icon_git.svg')
         },
         title: 'Git',
         details: 'Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。',
-        link: './frontend/git/deploy'
+        link: withBase('/frontend/git/deploy')
     }
 ])
 
