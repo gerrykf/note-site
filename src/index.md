@@ -48,4 +48,10 @@ features:
     title: Pinia
     details: Pinia 是一个为 Vue 3 设计的状态管理库。
     link: /frontend/pinia/guide
+
+  - icon:
+      src: /icon_ai.svg
+    title: AI大模型
+    details: AI大模型汇总
+    link: /ai/install-deepseek
 ---

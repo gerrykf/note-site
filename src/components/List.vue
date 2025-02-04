@@ -68,6 +68,14 @@ const features = ref([
         details: 'Pinia 是一个用于 Vue 3 的状态管理库，它使用 Vue 3 的响应式系统。',
         link: withBase('/frontend/pinia/guide')
     },
+    {
+        icon: {
+            src: withBase('/icon_deepseek.svg')
+        },
+        title: '本地部署DeepSeek',
+        details: '- MacOS',
+        link: withBase('/ai/install-deepseek')
+    },
 ])
 
 </script>
@@ -101,7 +109,6 @@ h1 {
 }
 
 .card img {
-    width: 50px;
     height: 50px;
     margin: 0 auto;
 }
