@@ -113,7 +113,7 @@ function head(): HeadConfig[] {
         href: "/favicon-180x180.png"
       }
     ],
-    ["link", { rel: "shortcut icon", href: "/favicon-16x16.ico" }],
+    ["link", { rel: "shortcut icon", href: "./favicon-16x16.ico" }],
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     [
       "link",
