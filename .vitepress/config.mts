@@ -200,10 +200,18 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "高阶",
               link: "/hign-order"
-            },
+            }
+          ]
+        },
+        {
+          text: "Pinia",
+          base: "/frontend/pinia",
+          link: "/",
+          collapsed: true,
+          items: [
             {
-              text: "Pinia",
-              link: "/pinia"
+              text: "指引",
+              link: "/guide"
             }
           ]
         },

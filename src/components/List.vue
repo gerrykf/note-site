@@ -42,7 +42,7 @@ const features = ref([
         },
         title: 'Vue.js',
         details: '轻松建构响应式界面，Vue.js是你的前端开发新选择。',
-        link: withBase('/frontend/vue/vue')
+        link: withBase('/frontend/vue/guide')
     },
     {
         icon: {
@@ -59,7 +59,15 @@ const features = ref([
         title: 'Git',
         details: 'Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。',
         link: withBase('/frontend/git/deploy')
-    }
+    },
+    {
+        icon: {
+            src: withBase('/icon_pinia.svg')
+        },
+        title: 'Pinia',
+        details: 'Pinia 是一个用于 Vue 3 的状态管理库，它使用 Vue 3 的响应式系统。',
+        link: withBase('/frontend/pinia/guide')
+    },
 ])
 
 </script>

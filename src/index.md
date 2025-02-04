@@ -42,4 +42,10 @@ features:
     title: Git
     details: Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
     link: /frontend/git/deploy
+
+  - icon:
+      src: /icon_pinia.svg
+    title: Pinia
+    details: Pinia 是一个为 Vue 3 设计的状态管理库。
+    link: /frontend/pinia/guide
 ---
