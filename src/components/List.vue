@@ -31,10 +31,12 @@ import { withBase } from 'vitepress';
 
 const features = ref([
     {
-        icon: '📓',
-        title: '面试题',
-        details: '30k+ 前端面试题汇总',
-        link: withBase('/interview-fq/vue')
+        icon: {
+            src: withBase('/icon_js.svg')
+        },
+        title: 'JavaScript',
+        details: 'JavaScript 是一种轻量级的编程语言。',
+        link: withBase('/frontend/js/环境准备')
     },
     {
         icon: {
@@ -99,6 +101,12 @@ const features = ref([
         title: 'HTTP',
         details: 'Http 是一种无状态的协议。',
         link: withBase('/stack/web/http')
+    },
+    {
+        icon: '📓',
+        title: '面试题',
+        details: '30k+ 前端面试题汇总',
+        link: withBase('/interview-fq/vue')
     },
 ])
 

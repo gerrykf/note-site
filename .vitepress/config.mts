@@ -190,6 +190,37 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       base: "/frontend/",
       items: [
         {
+          text: "JavaScript",
+          base: "/frontend/js",
+          collapsed: true,
+          items: [
+            {
+              text: "1.环境准备",
+              link: "/环境准备"
+            },
+            {
+              text: "2.数据的表达",
+              link: "/数据的表达"
+            },
+            {
+              text: "3.数据的运算",
+              link: "/数据的运算"
+            },
+            {
+              text: "4.数据的流程",
+              link: "/数据的流程"
+            },
+            {
+              text: "5.流程的切割",
+              link: "/流程的切割"
+            },
+            {
+              text: "6.数据的存储与传递",
+              link: "/数据的存储与传递"
+            }
+          ]
+        },
+        {
           text: "Vue",
           base: "/frontend/vue",
           collapsed: true,

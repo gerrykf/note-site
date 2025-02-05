@@ -25,6 +25,11 @@ hero:
 
 features:
   - icon:
+      src: /icon_js.svg
+    title: JavaScript
+    details: JavaScript 是一种轻量级的解释型编程语言。
+    link: /frontend/js/环境准备
+  - icon:
       src: /icon_vue.svg
     title: Vue.js
     details: 轻松建构响应式界面，Vue.js是你的前端开发新选择。
