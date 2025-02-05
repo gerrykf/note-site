@@ -82,7 +82,15 @@ const features = ref([
         },
         title: '网络',
         details: '所有计算机都需要遵循同一种网络协议。',
-        link: withBase('/stack/host')
+        link: withBase('/stack/web/')
+    },
+    {
+        icon: {
+            src: withBase('/icon_http.svg')
+        },
+        title: 'HTTP',
+        details: 'Http 是一种无状态的协议。',
+        link: withBase('/stack/web/http')
     },
 ])
 

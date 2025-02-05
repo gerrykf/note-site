@@ -180,7 +180,7 @@ function nav(): DefaultTheme.NavItem[] {
 function sidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: "全部概览",
+      text: "🧑‍💻 全部概览",
       link: "/latest"
     },
     {
@@ -248,7 +248,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: "后端",
+      text: "🗄️ 后端",
       collapsed: true,
       base: "/backend",
       items: [
@@ -258,18 +258,18 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         }
       ]
     },
-    {
-      text: "项目",
-      collapsed: true,
-      base: "/project",
-      link: "/",
-      items: [
-        {
-          text: "同策好房 ERP",
-          link: "/tongchehaofang-ERP"
-        }
-      ]
-    },
+    // {
+    //   text: "项目",
+    //   collapsed: true,
+    //   base: "/project",
+    //   link: "/",
+    //   items: [
+    //     {
+    //       text: "同策好房 ERP",
+    //       link: "/tongchehaofang-ERP"
+    //     }
+    //   ]
+    // },
     {
       text: "技术栈",
       base: "/stack/",
@@ -287,8 +287,43 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         },
         {
           text: "📡 网络",
-          link: "/host"
+          base: "/stack/web",
+          link: "/",
+          collapsed: true,
+          items: [
+            {
+              text: "📤 Http",
+              link: "/http"
+            },
+            {
+              text: "🌏 浏览器",
+              base: "/stack/web",
+              collapsed: true,
+              items: [
+                {
+                  text: "浏览器页面处理流程",
+                  link: "/浏览器页面处理流程"
+                }
+              ]
+            },
+            {
+              text: "🌏 AJAX",
+              base: "/stack/web/ajax",
+              collapsed: true,
+              items: [
+                {
+                  text: "fetch",
+                  link: "/fetch"
+                },
+                {
+                  text: "xhr",
+                  link: "/xhr"
+                }
+              ]
+            }
+          ]
         },
+
         {
           text: "📦 Node",
           link: "/node"
