@@ -16,6 +16,9 @@ hero:
       text: 前端
       link: /frontend/vue/guide
     - theme: alt
+      text: 后端
+      link: /backend/nodejs/nodejs
+    - theme: alt
       text: 技术栈
       link: /stack/node
     # - theme: alt
@@ -23,10 +26,6 @@ hero:
     #   link: /project/tongchehaofang-ERP
 
 features:
-  - icon: 📓
-    title: 面试题
-    details: 30k+ 前端面试题汇总
-    link: /interview-fq/vue
   - icon:
       src: /icon_vue.svg
     title: Vue.js
@@ -37,6 +36,13 @@ features:
     title: React.js
     details: 用于构建用户界面的 JavaScript 库。
     link: /frontend/react/guide
+
+  - icon:
+      src: /icon_nodejs.svg
+    title: Nodejs
+    details: Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。
+    link: /backend/nodejs/nodejs
+
   - icon:
       src: /icon_git.svg
     title: Git
@@ -54,4 +60,9 @@ features:
     title: AI大模型
     details: AI大模型汇总
     link: /ai/install-deepseek
+
+  - icon: 📓
+    title: 面试题
+    details: 30k+ 前端面试题汇总
+    link: /interview-fq/vue
 ---

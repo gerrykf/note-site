@@ -253,8 +253,8 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       base: "/backend",
       items: [
         {
-          text: "Node",
-          link: "/node"
+          text: "📦 Nodejs",
+          link: "/nodejs/nodejs"
         }
       ]
     },
@@ -322,11 +322,6 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               ]
             }
           ]
-        },
-
-        {
-          text: "📦 Node",
-          link: "/node"
         }
       ]
     }

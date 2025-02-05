@@ -54,6 +54,14 @@ const features = ref([
     },
     {
         icon: {
+            src: withBase('/icon_nodejs.svg')
+        },
+        title: 'Nodejs',
+        details: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。',
+        link: withBase('/backend/nodejs/nodejs')
+    },
+    {
+        icon: {
             src: withBase('/icon_git.svg')
         },
         title: 'Git',
