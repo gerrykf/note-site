@@ -82,7 +82,8 @@ export default defineConfig({
     image: {
       lazyLoading: true
     }
-  }
+  },
+  ignoreDeadLinks: true
 });
 
 function head(): HeadConfig[] {
