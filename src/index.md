@@ -18,9 +18,7 @@ hero:
     - theme: alt
       text: 后端
       link: /backend/nodejs/nodejs
-    - theme: alt
-      text: 技术栈
-      link: /stack/node
+
     # - theme: alt
     #   text: 项目
     #   link: /project/tongchehaofang-ERP
