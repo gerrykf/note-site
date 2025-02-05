@@ -76,6 +76,14 @@ const features = ref([
         details: '- MacOS',
         link: withBase('/ai/install-deepseek')
     },
+    {
+        icon: {
+            src: withBase('/icon_host.svg')
+        },
+        title: '网络',
+        details: '所有计算机都需要遵循同一种网络协议。',
+        link: withBase('/stack/host')
+    },
 ])
 
 </script>

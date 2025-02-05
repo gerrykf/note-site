@@ -92,7 +92,7 @@ function head(): HeadConfig[] {
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/favicon-180x180.png"
+        href: "/note-site/favicon-180x180.png"
       }
     ],
     [
@@ -101,7 +101,7 @@ function head(): HeadConfig[] {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "/favicon-32x32.png"
+        href: "/note-site/favicon-32x32.png"
       }
     ],
     [
@@ -110,7 +110,7 @@ function head(): HeadConfig[] {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "/favicon-180x180.png"
+        href: "/note-site/favicon-180x180.png"
       }
     ],
     ["link", { rel: "shortcut icon", href: "/note-site/favicon-16x16.ico" }],
@@ -184,7 +184,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       link: "/latest"
     },
     {
-      text: "前端",
+      text: "💻 前端",
       collapsed: true,
       base: "/frontend/",
       items: [
@@ -275,7 +275,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       base: "/stack/",
       items: [
         {
-          text: "AI大模型",
+          text: "🗿 AI大模型",
           base: "/ai",
           collapsed: true,
           items: [
@@ -286,7 +286,11 @@ function sidebar(): DefaultTheme.SidebarItem[] {
           ]
         },
         {
-          text: "Node",
+          text: "📡 网络",
+          link: "/host"
+        },
+        {
+          text: "📦 Node",
           link: "/node"
         }
       ]
