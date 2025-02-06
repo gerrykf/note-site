@@ -28,7 +28,7 @@ features:
       src: /icon_js.svg
     title: JavaScript
     details: JavaScript 是一种轻量级的解释型编程语言。
-    link: /frontend/js/环境准备
+    link: /frontend/js/guide/环境准备
   - icon:
       src: /icon_vue.svg
     title: Vue.js

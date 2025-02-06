@@ -36,7 +36,7 @@ const features = ref([
         },
         title: 'JavaScript',
         details: 'JavaScript 是一种轻量级的编程语言。',
-        link: withBase('/frontend/js/环境准备')
+        link: withBase('/frontend/js/guide/环境准备')
     },
     {
         icon: {

@@ -195,28 +195,54 @@ function sidebar(): DefaultTheme.SidebarItem[] {
           collapsed: true,
           items: [
             {
-              text: "1.环境准备",
-              link: "/环境准备"
+              text: "入门",
+              base: "/frontend/js/guide",
+              collapsed: true,
+              items: [
+                {
+                  text: "1.环境准备",
+                  link: "/环境准备"
+                },
+                {
+                  text: "2.数据的表达",
+                  link: "/数据的表达"
+                },
+                {
+                  text: "3.数据的运算",
+                  link: "/数据的运算"
+                },
+                {
+                  text: "4.数据的流程",
+                  link: "/数据的流程"
+                },
+                {
+                  text: "5.流程的切割",
+                  link: "/流程的切割"
+                }
+              ]
             },
             {
-              text: "2.数据的表达",
-              link: "/数据的表达"
-            },
-            {
-              text: "3.数据的运算",
-              link: "/数据的运算"
-            },
-            {
-              text: "4.数据的流程",
-              link: "/数据的流程"
-            },
-            {
-              text: "5.流程的切割",
-              link: "/流程的切割"
-            },
-            {
-              text: "6.数据的存储与传递",
-              link: "/数据的存储与传递"
+              text: "高阶",
+              base: "/frontend/js/hign-order",
+              collapsed: true,
+              items: [
+                {
+                  text: "1.数据的存储与传递",
+                  link: "/数据的存储与传递"
+                },
+                {
+                  text: "2.数据的作用域",
+                  link: "/数据的作用域"
+                },
+                {
+                  text: "3.全局对象",
+                  link: "/全局对象"
+                },
+                {
+                  text: "4.构造函数",
+                  link: "/构造函数"
+                }
+              ]
             }
           ]
         },
@@ -236,18 +262,6 @@ function sidebar(): DefaultTheme.SidebarItem[] {
           ]
         },
         {
-          text: "Pinia",
-          base: "/frontend/pinia",
-          link: "/",
-          collapsed: true,
-          items: [
-            {
-              text: "指引",
-              link: "/guide"
-            }
-          ]
-        },
-        {
           text: "React",
           base: "/frontend/react",
           collapsed: true,
@@ -259,21 +273,6 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "高阶",
               link: "/hign-order"
-            }
-          ]
-        },
-        {
-          text: "Git",
-          collapsed: true,
-          base: "/frontend/git",
-          items: [
-            {
-              text: "入门",
-              link: "/guide"
-            },
-            {
-              text: "部署github pages",
-              link: "/deploy"
             }
           ]
         }
@@ -352,6 +351,33 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                   link: "/xhr"
                 }
               ]
+            }
+          ]
+        },
+        {
+          text: "🍍 Pinia",
+          base: "/frontend/pinia",
+          link: "/",
+          collapsed: true,
+          items: [
+            {
+              text: "指引",
+              link: "/guide"
+            }
+          ]
+        },
+        {
+          text: "🕰️ Git",
+          collapsed: true,
+          base: "/frontend/git",
+          items: [
+            {
+              text: "入门",
+              link: "/guide"
+            },
+            {
+              text: "部署github pages",
+              link: "/deploy"
             }
           ]
         }
