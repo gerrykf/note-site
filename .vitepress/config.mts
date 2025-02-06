@@ -241,8 +241,32 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                 {
                   text: "4.构造函数",
                   link: "/构造函数"
+                },
+                {
+                  text: "5.原型",
+                  link: "/原型"
+                },
+                {
+                  text: "6.this的指向",
+                  link: "/this的指向"
+                },
+                {
+                  text: "7.原型链",
+                  link: "/原型链"
+                },
+                {
+                  text: "8.继承",
+                  link: "/继承"
                 }
               ]
+            },
+            {
+              text: "正则表达式",
+              link: "/正则表达式"
+            },
+            {
+              text: "浏览器的渲染原理",
+              link: "/浏览器的渲染原理"
             }
           ]
         },
