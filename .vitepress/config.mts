@@ -404,6 +404,16 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               link: "/deploy"
             }
           ]
+        },
+        {
+          text: "Cocos Creator",
+          base: "/stack/cocos",
+          items: [
+            {
+              text: "入门",
+              link: "/guide"
+            }
+          ]
         }
       ]
     }
