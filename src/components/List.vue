@@ -32,6 +32,22 @@ import { withBase } from 'vitepress';
 const features = ref([
     {
         icon: {
+            src: withBase('/icon_html.svg')
+        },
+        title: 'HTML',
+        details: 'HTML 是用来描述网页的一种语言。',
+        link: withBase('/frontend/html/文档声明')
+    },
+    {
+        icon: {
+            src: withBase('/icon_css.svg')
+        },
+        title: 'CSS',
+        details: 'CSS 是用来控制网页样式的一种语言。',
+        link: withBase('/frontend/css/css')
+    },
+    {
+        icon: {
             src: withBase('/icon_js.svg')
         },
         title: 'JavaScript',

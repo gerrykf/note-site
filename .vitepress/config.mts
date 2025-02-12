@@ -190,6 +190,75 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       base: "/frontend/",
       items: [
         {
+          text: "HTML+CSS",
+          base: "/frontend/html-css",
+          collapsed: true,
+          items: [
+            {
+              text: "HTML",
+              base: "/frontend/html",
+              collapsed: true,
+              items: [
+                {
+                  text: "1.文档声明",
+                  link: "/文档声明"
+                },
+                {
+                  text: "2.语义化",
+                  link: "/语义化"
+                },
+                {
+                  text: "3.W3C标准组织",
+                  link: "/W3C标准组织"
+                },
+                {
+                  text: "4.SEO",
+                  link: "/SEO"
+                },
+                {
+                  text: "5.iframe",
+                  link: "/iframe"
+                },
+                {
+                  text: "6.微格式",
+                  link: "/微格式"
+                },
+                {
+                  text: "7.替换元素",
+                  link: "/替换元素"
+                },
+                {
+                  text: "8.页面可见性",
+                  link: "/页面可见性"
+                },
+                {
+                  text: "面试题",
+                  link: "/interview"
+                }
+              ]
+            },
+            {
+              text: "CSS",
+              base: "/frontend/css",
+              collapsed: true,
+              items: [
+                {
+                  text: "CSS基础",
+                  link: "/css"
+                },
+                {
+                  text: "CSS3",
+                  link: "/css3"
+                },
+                {
+                  text: "CSS预处理器",
+                  link: "/sass"
+                }
+              ]
+            }
+          ]
+        },
+        {
           text: "JavaScript",
           base: "/frontend/js",
           collapsed: true,

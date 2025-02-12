@@ -25,6 +25,12 @@ hero:
 
 features:
   - icon:
+      src: /icon_html&css.svg
+    title: HTML+CSS
+    details: HTML 是用来描述网页的一种语言, CSS 是用来控制网页样式的一种语言。
+    link: /frontend/html/文档声明
+
+  - icon:
       src: /icon_js.svg
     title: JavaScript
     details: JavaScript 是一种轻量级的解释型编程语言。
