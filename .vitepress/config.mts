@@ -243,12 +243,44 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               collapsed: true,
               items: [
                 {
-                  text: "CSS基础",
-                  link: "/css"
+                  text: "1.CSS单位总结",
+                  link: "/CSS单位总结"
                 },
                 {
-                  text: "CSS3",
-                  link: "/css3"
+                  text: "2.居中方式总结",
+                  link: "/居中方式总结"
+                },
+                {
+                  text: "3.隐藏元素的方式总结",
+                  link: "/隐藏元素的方式总结"
+                },
+                {
+                  text: "4.浮动",
+                  link: "/浮动"
+                },
+                {
+                  text: "5.定位总结",
+                  link: "/定位总结"
+                },
+                {
+                  text: "6.BFC",
+                  link: "/BFC"
+                },
+                {
+                  text: "7.CSS属性的计算过程",
+                  link: "/CSS属性的计算过程"
+                },
+                {
+                  text: "8.import指令",
+                  link: "/import指令"
+                },
+                {
+                  text: "9.CSS3的calc函数",
+                  link: "/CSS3的calc函数"
+                },
+                {
+                  text: "10.CSS3的媒介(media)查询",
+                  link: "/CSS3的媒介(media)查询"
                 },
                 {
                   text: "CSS预处理器",
