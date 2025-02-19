@@ -506,13 +506,28 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             }
           ]
         },
+        // {
+        //   text: "Cocos Creator",
+        //   base: "/stack/cocos",
+        //   items: [
+        //     {
+        //       text: "入门",
+        //       link: "/guide"
+        //     }
+        //   ]
+        // }
         {
-          text: "Cocos Creator",
-          base: "/stack/cocos",
+          text: "🐳 Docker",
+          base: "/stack/docker",
+          collapsed: true,
           items: [
             {
-              text: "入门",
+              text: "指导",
               link: "/guide"
+            },
+            {
+              text: "vue3项目打包成docker镜像部署到阿里云",
+              link: "/vue3项目打包成docker镜像部署"
             }
           ]
         }
