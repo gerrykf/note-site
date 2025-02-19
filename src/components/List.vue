@@ -80,6 +80,14 @@ const features = ref([
     },
     {
         icon: {
+            src: withBase('/icon_docker.svg')
+        },
+        title: 'Docker',
+        details: 'Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。',
+        link: withBase('/stack/docker/guide')
+    },
+    {
+        icon: {
             src: withBase('/icon_git.svg')
         },
         title: 'Git',

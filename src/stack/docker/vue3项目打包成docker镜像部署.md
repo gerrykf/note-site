@@ -282,27 +282,50 @@ docker push harbor.example.com/vue3-app:latest
 
 ## 12. DevOpes 自动化部署
 
-### 管道流程
+### 管道流程任务
 
-1. `pnpm install` 安装依赖
-2. `pnpm run build` 打包项目
-3. 删除发布目录缓存
-4. 复制dist文件到发布目录
-5. 生成压缩包
-6. 发布项目
+1. 使用 Node.js 生态系统 版本20.x
+2. `npm install -g pnpm` 安装 pnpm
+3. `pnpm install` 安装依赖
+4. `pnpm run build` 打包项目
+5. 复制dist文件到发布目录
+6. 复制nginx.conf文件到发布目录
+7. 复制Dockerfile文件到发布目录
+8. 发布项目
 
 ### 发布流程
 
-发布管道任务
+#### 新建发布管道
 
-1. `docker login` 登录容器仓库
-2. 构建&推送镜像
+- 项目区域
 
-    - 选择容器注册表
-    - 为容器填写镜像名称
-    - 命令选择 `buildAndPush`
-    - 填写 `Dockerfile`文件路径
-    - 填写 `Context` 上下文路径（就是资源文件路径 例如：/dist）
+    1. 源类型 Build
+    2. 选择项目
+    3. 选择管道源
+
+- 阶段区域
+
+    1. 添加阶段 选择Azure 应用服务部署
+    2. 查看阶段任务
+        - 在代理任务上点击+号 搜索 `Docker`
+
+            1. `docker login` 登录容器仓库
+                - 显示名称 `Login`
+                - 容器注册表 `harbor.example.com`
+                - 命令 `login`
+                - 将管道元数据添加到映像
+                - 将基本映像元数据添加到映像
+
+            2. 构建&推送(buildAndPush)镜像
+
+                - 显示名称 `buildAndPush`
+                - 容器注册表 `harbor.example.com`
+                - 容器存储库 `vue3-app`
+                - 命令选择 `buildAndPush`
+                - 填写 `Dockerfile`文件路径
+                - 填写 `Context` 上下文路径（就是资源文件路径 例如：/dist）
+                - 将管道元数据添加到映像
+                - 将基本映像元数据添加到映像
 
 ## 将静态项目打包成docker镜像推送至harbor仓库
 

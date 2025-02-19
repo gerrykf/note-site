@@ -53,6 +53,12 @@ features:
     link: /backend/nodejs/nodejs
 
   - icon:
+      src: /icon_docker.svg
+    title: Docker
+    details: Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。
+    link: /stack/docker/guide
+
+  - icon:
       src: /icon_git.svg
     title: Git
     details: Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
