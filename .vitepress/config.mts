@@ -129,15 +129,15 @@ function head(): HeadConfig[] {
     ],
     [
       "script",
-      { async: "", src: "https://www.googletagmanager.com/gtag/js?id=TAG_ID" }
+      { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-HSD2TJHNFJ" }
     ],
     [
       "script",
       {},
       `window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'TAG_ID');`
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'G-HSD2TJHNFJ');`
     ]
   ];
 }
@@ -368,6 +368,35 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "浏览器的渲染原理",
               link: "/浏览器的渲染原理"
+            }
+          ]
+        },
+        {
+          text: "TypeScript",
+          base: "/frontend/ts",
+          collapsed: true,
+          items: [
+            {
+              text: "入门",
+              base: "/frontend/ts/guide",
+              collapsed: true,
+              items: [
+                {
+                  text: "1.安装与运行",
+                  link: "/安装与运行"
+                }
+              ]
+            },
+            {
+              text: "高阶",
+              base: "/frontend/ts/hign-order",
+              collapsed: true,
+              items: [
+                {
+                  text: "1.安装与运行",
+                  link: "/安装与运行"
+                }
+              ]
             }
           ]
         },

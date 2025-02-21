@@ -35,11 +35,19 @@ features:
     title: JavaScript
     details: JavaScript 是一种轻量级的解释型编程语言。
     link: /frontend/js/guide/环境准备
+
+  - icon:
+      src: /icon_ts.svg
+    title: TypeScript
+    details: TypeScript 是 JavaScript 的一个超集，支持类型。
+    link: /frontend/ts/guide/安装与运行
+
   - icon:
       src: /icon_vue.svg
     title: Vue.js
     details: 轻松建构响应式界面，Vue.js是你的前端开发新选择。
     link: /frontend/vue/guide
+
   - icon:
       src: /icon_react.svg
     title: React.js

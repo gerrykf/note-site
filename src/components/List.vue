@@ -56,6 +56,14 @@ const features = ref([
     },
     {
         icon: {
+            src: withBase('/icon_ts.svg')
+        },
+        title: 'TypeScript',
+        details: 'TypeScript 是 JavaScript 的一个超集，支持类型。',
+        link: withBase('/frontend/ts/guide/安装与运行')
+    },
+    {
+        icon: {
             src: withBase('/icon_vue.svg')
         },
         title: 'Vue.js',
