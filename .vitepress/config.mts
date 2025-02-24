@@ -5,8 +5,8 @@ import { SearchPlugin } from "vitepress-plugin-search";
 export default defineConfig({
   base: "/note-site/",
   lang: "zh-CN",
-  title: "Gerry前端笔记官网",
-  description: "Gerry的前端笔记官网 记录学习各个栈的过程与心得",
+  title: "Gerry前端个人博客",
+  description: "Gerry的前端个人博客 记录学习各个栈的过程与心得",
   head: head(),
   outDir: "dist",
   srcDir: "src",
@@ -129,7 +129,10 @@ function head(): HeadConfig[] {
     ],
     [
       "script",
-      { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-HSD2TJHNFJ" }
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-HSD2TJHNFJ"
+      }
     ],
     [
       "script",

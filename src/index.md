@@ -3,10 +3,10 @@
 layout: home
 
 hero:
-  name: "前端笔记官网"
+  name: "前端个人博客"
   image: /logo.png
   alt: gerry
-  text: "前端的笔记官网 记录学习各个栈的过程与心得"
+  text: "前端的个人博客 记录学习各个栈的过程与心得"
   tagline: 一起探索前端的无线可能
   actions:
     - theme: brand
