@@ -1,5 +1,22 @@
 # Vue面试题
 
+- [Vue面试题](#vue面试题)
+  - [Vue2 \& Vue3 语法差异？](#vue2--vue3-语法差异)
+    - [1. **Composition API vs Options API**](#1-composition-api-vs-options-api)
+    - [2. **响应式系统**](#2-响应式系统)
+    - [3. **声明周期钩子变更**](#3-声明周期钩子变更)
+    - [4. **全局API**](#4-全局api)
+    - [5. **Fragments**](#5-fragments)
+    - [6. **事件监听**](#6-事件监听)
+    - [7. **异步组件**](#7-异步组件)
+  - [`composition API` 使用？](#composition-api-使用)
+  - [`setup` 的执行时机？](#setup-的执行时机)
+  - [Vue3 `ref/reactive` 区别？](#vue3-refreactive-区别)
+  - [Vue3 的 `Teleport`、`Suspense` 用过吗？](#vue3-的-teleportsuspense-用过吗)
+  - [Vue2 `mixin` 和 Vue3 `composition API` 组合式函数如何替代？](#vue2-mixin-和-vue3-composition-api-组合式函数如何替代)
+  - [为什么 vue3 中去掉了 vue 构造函数？](#为什么-vue3-中去掉了-vue-构造函数)
+  - [vue3 数据响应式的理解](#vue3-数据响应式的理解)
+
 ## Vue2 & Vue3 语法差异？
 
 Vue3相较于Vue2主要在以下几个方面:

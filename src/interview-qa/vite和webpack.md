@@ -1,4 +1,25 @@
-# vite 和 webpack
+# Vite 和 Webpack
+
+- [Vite 和 Webpack](#vite-和-webpack)
+  - [基础概念](#基础概念)
+    - [1. Vite 和 Webpack 有什么区别？](#1-vite-和-webpack-有什么区别)
+    - [2. Vite 为什么启动更快？](#2-vite-为什么启动更快)
+    - [3. Vite 和 Webpack 在构建时的差异？](#3-vite-和-webpack-在构建时的差异)
+  - [性能优化](#性能优化)
+    - [1. 如何优化 Webpack 构建速度？](#1-如何优化-webpack-构建速度)
+    - [2. 如何优化 Vite 构建速度？](#2-如何优化-vite-构建速度)
+  - [进阶问题](#进阶问题)
+    - [1. Vite 和 Webpack 分别适用于哪些场景？](#1-vite-和-webpack-分别适用于哪些场景)
+    - [2. Vite/Webpack 是如何实现 HMR（热更新）的？](#2-vitewebpack-是如何实现-hmr热更新的)
+    - [3. Webpack Tree Shaking 的原理是什么？](#3-webpack-tree-shaking-的原理是什么)
+    - [4. 如何在 Vite 和 Webpack 中实现代码分割（Code Splitting）？](#4-如何在-vite-和-webpack-中实现代码分割code-splitting)
+  - [其他问题](#其他问题)
+    - [1. 如何在 Vite 和 Webpack 中进行跨域代理？](#1-如何在-vite-和-webpack-中进行跨域代理)
+    - [2. Vite 和 Webpack 如何处理 CSS？](#2-vite-和-webpack-如何处理-css)
+  - [总结](#总结)
+    - [表格对比](#表格对比)
+    - [Webpack 打包构建流程](#webpack-打包构建流程)
+    - [Vite 打包构建流程](#vite-打包构建流程)
 
 > Vite 和 Webpack 是前端构建工具，在面试中经常被问到，尤其是它们的区别、优缺点、工作原理以及优化方案。以下是一些常见的 Vite 和 Webpack 面试题：
 
