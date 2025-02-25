@@ -87,5 +87,5 @@ features:
   - icon: 📓
     title: 面试题
     details: 30k+ 前端面试题汇总
-    link: /interview-fq/vue
+    link: /interview-qa/vue
 ---

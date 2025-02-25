@@ -564,6 +564,28 @@ function sidebar(): DefaultTheme.SidebarItem[] {
           ]
         }
       ]
+    },
+    {
+      text: "面试题",
+      base: "/interview-qa/",
+      items: [
+        {
+          text: "总结",
+          link: "/总结"
+        },
+        {
+          text: "Vue",
+          link: "/vue"
+        },
+        {
+          text: "Vite和Webpack",
+          link: "/vite和webpack"
+        },
+        {
+          text: "Pinia和Vuex",
+          link: "pinia和vuex"
+        }
+      ]
     }
   ];
 }
@@ -571,7 +593,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
 function socialLinks(): DefaultTheme.SocialLink[] {
   return [
     { icon: "github", link: "https://github.com/gerrykf/note-site" },
-    { icon: "twitter", link: "https://twitter.com/vite_js" },
-    { icon: "discord", link: "https://chat.vitejs.dev" }
+    // { icon: "twitter", link: "https://twitter.com/vite_js" },
+    // { icon: "discord", link: "https://chat.vitejs.dev" }
   ];
 }
