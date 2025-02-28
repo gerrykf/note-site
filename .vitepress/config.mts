@@ -566,6 +566,17 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               link: "/vue3项目打包成docker镜像部署"
             }
           ]
+        },
+        {
+          text: "🔧 ES6+",
+          base: "/stack/es6+",
+          collapsed: true,
+          items: [
+            {
+              text: "Proxy",
+              link: "/proxy"
+            }
+          ]
         }
       ]
     },
