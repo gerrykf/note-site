@@ -4,11 +4,11 @@
 
 在 _Vue_ 中，我们可以针对 _props_ 属性进行类型验证，那么在 _React_ 中同样也能对 _props_ 进行验证。
 
-> 官网文档地址：*https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html*
+> 官网文档地址：_<https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html>_
 
 从 _React v15.5_ 开始，_React.PropTypes_ 已移入另一个包中。因此首先我们需要安装 _prop-types_ 库。
 
-> _prop-types_ 库文档地址：*https://www.npmjs.com/package/prop-types*
+> _prop-types_ 库文档地址：_<https://www.npmjs.com/package/prop-types>_
 
 有关 _props_ 验证这一块，我们主要需要搞清楚以下几个知识点：
 
@@ -19,7 +19,7 @@
 
 有关 _props_ 能够验证的类型，官网实际上已经全部罗列出来了。
 
-> 对应地址：*https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html#proptypes*
+> 对应地址：_<https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html#proptypes>_
 
 下面是一个简单示例。
 
@@ -210,7 +210,7 @@ export default ChildCom;
 
 _props_ 属性还可以设置默认值，这一点官网已经有了很好的示例，请参阅：
 
-> *https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values*
+> _<https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values>_
 
 -_EOF_-
 
@@ -275,7 +275,7 @@ const ExampleComponent = React.createClasss({
 >
 > 每一个新的需求都使 _mixins_ 更难理解。使用相同 _mixin_ 的组件会随着时间的推移变得越来越耦合。任何新功能都可以使用 _mixins_ 添加到所有组件中。渐渐地，封装边界被侵蚀了，由于很难更改或删除现有的 _mixins_，它们变得越来越抽象，直到没有人理解它们是如何工作的。
 >
-> 关于 _mixin_ 的讨论，可以参阅官方文档：*https://zh-hans.reactjs.org/blog/2016/07/13/mixins-considered-harmful.html*
+> 关于 _mixin_ 的讨论，可以参阅官方文档：_<https://zh-hans.reactjs.org/blog/2016/07/13/mixins-considered-harmful.html>_
 
 之后 _React_ 推出了高阶组件的抽离方式，如下图所示：
 
@@ -433,11 +433,11 @@ connect(mapState)(MyComponent);
 connect(mapState, null, mergeProps, options)(MyComponent);
 ```
 
-> *https://react-redux.js.org/api/connect#connect-returns*
+> _<https://react-redux.js.org/api/connect#connect-returns>_
 
 不过有意思的是，如果你查阅官网，会发现官网给的示例基本都是类组件的示例。
 
-> *https://zh-hans.reactjs.org/docs/higher-order-components.html*
+> _<https://zh-hans.reactjs.org/docs/higher-order-components.html>_
 
 没错，_HOC_ 实际上就是为了解决早期**类组件**的公共逻辑抽离的问题，那个时候在 _React_ 中类组件占主流。但是随着目前 _Hook_ 的出现，函数组件开始占主流，_React_ 开发的思想也从面向对象转为了函数式编程，抽离公共逻辑也能够非常简单的使用自定义 _Hook_ 来实现了。
 
@@ -504,13 +504,13 @@ export default class App extends Component {
 - 避免使用 _refs_ 来做任何可以通过声明式实现来完成的事情
 - 该 _API_ 已经过时，可能会在未来的版本被移除，官方建议我们使用回调函数或 _createRef API_ 的方式来代替
 
-参阅官网 *https://zh-hans.reactjs.org/docs/refs-and-the-dom.html#legacy-api-string-refs*
+参阅官网 _<https://zh-hans.reactjs.org/docs/refs-and-the-dom.html#legacy-api-string-refs>_
 
 至于为什么 _String_ 类型的 _Refs_ 会被废弃，主要是以下几个方面原因：
 
 ![image-20221130135301934](https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-11-30-055302.png)
 
-参阅地址：*https://github.com/facebook/react/pull/8333#issuecomment-271648615*
+参阅地址：_<https://github.com/facebook/react/pull/8333#issuecomment-271648615>_
 
 ### _createRef API_
 
@@ -645,7 +645,7 @@ export default class App extends Component {
 
 ### _Ref_ 转发
 
-既然要讲 _Ref_，咱们就一起把它整个知识点一起讲完，接下来要介绍的是*Ref* 的转发。
+既然要讲 _Ref_，咱们就一起把它整个知识点一起讲完，接下来要介绍的是_Ref_ 的转发。
 
 _Ref_ 转发是一个可选特性，其允许某些组件接收 _ref_，并将其向下传递（换句话说，“转发”它）给子组件。
 
@@ -823,7 +823,7 @@ export default withLog;
 
 我们知道，现在整个 _React_ 是函数组件大行其道，那么自然我们会遇到函数组件下如何进行 _Ref_ 的关联。
 
-在函数组件中，官方为我们提供了新的 _useRef_ 这个 *Hook*来进行关联，但是也可以使用 _createRef API_，示例如下：
+在函数组件中，官方为我们提供了新的 _useRef_ 这个 _Hook_来进行关联，但是也可以使用 _createRef API_，示例如下：
 
 ```js
 import React from "react";
@@ -863,7 +863,7 @@ export default App;
 
 - _useRef_ 是 _hooks_ 的一种，一般用于 _function_ 组件，而 _createRef_ 一般用于 _class_ 组件
 
-- 由 _useRef_ 创建的 _ref_ 对象在组件的整个生命周期内都不会改变，但是由 _createRef_ 创建的 _ref_ 对象，组件每更新一次，*ref*对象就会被重新创建
+- 由 _useRef_ 创建的 _ref_ 对象在组件的整个生命周期内都不会改变，但是由 _createRef_ 创建的 _ref_ 对象，组件每更新一次，_ref_对象就会被重新创建
 
 实际上，就是因为在函数式组件中使用 _createRef_ 创建 _ref_ 时存在弊端，组件每次更新，_ref_ 对象就会被重新创建，所以出现了 _useRef_ 来解决这个问题。
 
@@ -1029,7 +1029,7 @@ export default React.forwardRef(ChildCom1);
 根据我们前面所讲的单项数据流的规则，那么数据应该被提升到 _App_ 根组件，然后通过 _props_ 一层一层的传递给下面的子组件，最终 _subComA-1_ 拿到所需要的数据；如果 _subComA-1_ 组件需要修改传递下来的数据，那么该组件就还需接收从 _App_ 根组件一层一层传递下来的能够修改数据的方法。
 
 官方在“何时使用 _Context_”这一小节也举了一个形象的例子：
-*https://zh-hans.reactjs.org/docs/context.html#when-to-use-context*
+_<https://zh-hans.reactjs.org/docs/context.html#when-to-use-context>_
 
 因此，简单一句话概括 _Context_，那就是解决组件之间数据共享的问题，避免一层一层的传递。
 
@@ -1043,7 +1043,7 @@ _Context_ 如果直接翻译成中文，会被翻译成“上下文”，这其�
 
 ### _Context_ 的用法
 
-_React_ 官方对于 _Context_ 的用法，分为旧版 _API_ 和新版 _API_，有关旧版 _API_ 的用法，本文档就不再赘述，如果有需要的同学，可以参阅：*https://zh-hans.reactjs.org/docs/legacy-context.html*
+_React_ 官方对于 _Context_ 的用法，分为旧版 _API_ 和新版 _API_，有关旧版 _API_ 的用法，本文档就不再赘述，如果有需要的同学，可以参阅：_<https://zh-hans.reactjs.org/docs/legacy-context.html>_
 
 这里我们来看一下新版 _API_ 的使用，示例如下：
 
@@ -2182,7 +2182,7 @@ export default class App extends Component {
 
 此时，我们就可以使用 _shouldComponentUpdate_ 来进行优化。
 
-文档地址：*https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate*
+文档地址：_<https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate>_
 
 当 _props_ 或 _state_ 发生变化时，_shouldComponentUpdate_ 会在渲染执行之前被调用。返回值默认为 _true_。首次渲染或使用 _forceUpdate_ 方法时不会调用该方法。
 
@@ -2246,7 +2246,7 @@ export default class App extends Component {
 
 此方法仅作为性能优化的方式而存在，不要企图依靠此方法来“阻止”渲染。另外，现在 _React_ 官方已经提供了 _PureComponent_，因此一般情况下我们是不需要手写 _shouldComponentUpdate_ 的。
 
-_PureComponent_ 文档：*https://zh-hans.reactjs.org/docs/react-api.html#reactpurecomponent*
+_PureComponent_ 文档：_<https://zh-hans.reactjs.org/docs/react-api.html#reactpurecomponent>_
 
 > **<u>_React.PureComponent_ 与 _React.Component_ 很相似。两者的区别在于 _React.Component_ 并未实现 _shouldComponentUpdate( )_，而 _React.PureComponent_ 中以浅层对比 _prop_ 和 _state_ 的方式来实现了该函数。</u>**
 
@@ -2335,7 +2335,7 @@ _shouldComponentUpdate_ 与 _PureComnent_ 主要是优化类组件的渲染性�
 
 在 _React_ 中，为我们提供了 _React.memo_。
 
-文档地址：*https://zh-hans.reactjs.org/docs/react-api.html#reactmemo*
+文档地址：_<https://zh-hans.reactjs.org/docs/react-api.html#reactmemo>_
 
 这是一个高阶组件，如果你的组件在相同 _props_ 的情况下渲染相同的结果，那么你可以通过将其包装在 _React.memo_ 中调用，以此通过记忆组件渲染结果的方式来提高组件的性能表现。
 
@@ -2759,7 +2759,7 @@ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
 主要用于返回一个 _memoized_ 值。
 
-文档地址：*https://zh-hans.reactjs.org/docs/hooks-reference.html#usememo*
+文档地址：_<https://zh-hans.reactjs.org/docs/hooks-reference.html#usememo>_
 
 某些时候，组件中某些值需要根据状态进行一个二次计算（类似于 _Vue_ 中的计算属性），由于函数组件一旦重新渲染，就会重新执行整个函数，这就导致之前的二次计算也会重新执行一次，例如：
 
@@ -2829,7 +2829,7 @@ export default App;
 
 在上面的示例中，我们使用了 _useMemo_ 来缓存二次计算的值，并设置了依赖项 _count_，只有在 _count_ 发生改变时，才会重新执行二次计算。
 
-> 面试题：_useMemo_ 和 _useCallback_ 的区别及使用场景?
+## 面试题：_useMemo_ 和 _useCallback_ 的区别及使用场景?
 >
 > _useMemo_ 和 _useCallback_ 接收的参数都是一样，第一个参数为回调，第二个参数为要依赖的数据。
 >
@@ -2838,7 +2838,7 @@ export default App;
 >
 > 两者区别：
 >
-> 1.  _useMemo_ 计算结果是 _return_ 回来的值, 主要用于缓存计算结果的值。应用场景如：需要进行二次计算的状态
-> 2.  _useCallback_ 计算结果是函数, 主要用于缓存函数，应用场景如: 需要缓存的函数，因为函数式组件每次任何一个 _state_ 的变化，整个组件都会被重新刷新，一些函数是没有必要被重新刷新的，此时就应该缓存起来，提高性能，和减少资源浪费。
+> 1. _useMemo_ 计算结果是 _return_ 回来的值, 主要用于缓存计算结果的值。应用场景如：需要进行二次计算的状态
+> 2. _useCallback_ 计算结果是函数, 主要用于缓存函数，应用场景如: 需要缓存的函数，因为函数式组件每次任何一个 _state_ 的变化，整个组件都会被重新刷新，一些函数是没有必要被重新刷新的，此时就应该缓存起来，提高性能，和减少资源浪费。
 
 -_EOF_-

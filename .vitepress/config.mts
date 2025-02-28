@@ -430,6 +430,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "高阶",
               link: "/hign-order"
+            },
+            {
+              text: "React-Native",
+              link: "/react-native"
             }
           ]
         }
@@ -584,6 +588,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         {
           text: "Pinia和Vuex",
           link: "pinia和vuex"
+        },
+        {
+          text: "React",
+          link: "/react"
         }
       ]
     }
@@ -592,7 +600,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
 
 function socialLinks(): DefaultTheme.SocialLink[] {
   return [
-    { icon: "github", link: "https://github.com/gerrykf/note-site" },
+    { icon: "github", link: "https://github.com/gerrykf/note-site" }
     // { icon: "twitter", link: "https://twitter.com/vite_js" },
     // { icon: "discord", link: "https://chat.vitejs.dev" }
   ];

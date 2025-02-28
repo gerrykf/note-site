@@ -138,7 +138,7 @@ const features = ref([
         icon: '📓',
         title: '面试题',
         details: '30k+ 前端面试题汇总',
-        link: withBase('/interview-fq/vue')
+        link: withBase('/interview-qa/vue')
     },
 ])
 
