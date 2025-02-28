@@ -592,6 +592,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         {
           text: "React",
           link: "/react"
+        },
+        {
+          text: "前端优化",
+          link: "/前端优化"
         }
       ]
     }
