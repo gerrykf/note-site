@@ -64,6 +64,14 @@ const features = ref([
     },
     {
         icon: {
+            src: withBase('/icon_es6.svg')
+        },
+        title: 'ES6+',
+        details: 'ECMAScript 6.0 是 JavaScript 语言的下一代标准。',
+        link: withBase('/stack/es6+/proxy')
+    },
+    {
+        icon: {
             src: withBase('/icon_vue.svg')
         },
         title: 'Vue.js',

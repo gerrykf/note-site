@@ -43,6 +43,12 @@ features:
     link: /frontend/ts/guide/安装与运行
 
   - icon:
+      src: /icon_es6.svg
+    title: ES6+
+    details: ECMAScript 6 是 JavaScript 语言的下一代标准。
+    link: /stack/es6+/proxy
+
+  - icon:
       src: /icon_vue.svg
     title: Vue.js
     details: 轻松建构响应式界面，Vue.js是你的前端开发新选择。
