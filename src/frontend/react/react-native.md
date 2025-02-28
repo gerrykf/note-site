@@ -789,6 +789,7 @@ brew install --cask flipper
 ```
 
 可以查看日志、性能监控、Redux 状态等。
+![alt text](image-3.png)
 
 ## 总结
 
