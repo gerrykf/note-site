@@ -80,9 +80,9 @@ export default defineConfig({
       VitePWA({
         registerType: "autoUpdate", // Service Worker 版本更新策略
         manifest: {
-          name: "My VitePress PWA",
-          short_name: "VitePressPWA",
-          description: "A VitePress site with PWA support",
+          name: "gerry note site",
+          short_name: "NoteSite",
+          description: "gerry 前端个人博客",
           theme_color: "#ffffff",
           icons: [
             {
