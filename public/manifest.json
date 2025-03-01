@@ -1,7 +1,8 @@
 {
   "name": "gerry note site",
   "short_name": "NoteSite",
-  "start_url": "/note-site",
+  "start_url": "/note-site/",
+  "scope": "/note-site/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
