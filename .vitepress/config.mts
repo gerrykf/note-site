@@ -1,5 +1,6 @@
 import { DefaultTheme, defineConfig, HeadConfig } from "vitepress";
 import { SearchPlugin } from "vitepress-plugin-search";
+import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -75,6 +76,43 @@ export default defineConfig({
         placeholder: "搜索文档", // 这个选项可以用来设置搜索输入框的占位符
         allow: [], // 这是一个数组，你可以在这个数组中指定哪些页面可以被搜索
         ignore: [] // 这也是一个数组，你可以在这个数组中指定哪些页面不被搜索
+      }),
+      VitePWA({
+        registerType: "autoUpdate", // Service Worker 版本更新策略
+        manifest: {
+          name: "My VitePress PWA",
+          short_name: "VitePressPWA",
+          description: "A VitePress site with PWA support",
+          theme_color: "#ffffff",
+          icons: [
+            {
+              src: "/pwa-192x192.png",
+              sizes: "192x192",
+              type: "image/png"
+            },
+            {
+              src: "/pwa-512x512.png",
+              sizes: "512x512",
+              type: "image/png"
+            }
+          ]
+        },
+        workbox: {
+          globPatterns: ["**/*.{js,css,html,woff2,png,svg}"], // 需要缓存的文件类型
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com/, // 缓存 Google Fonts
+              handler: "CacheFirst",
+              options: {
+                cacheName: "google-fonts",
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365
+                }
+              }
+            }
+          ]
+        }
       })
     ]
   },
