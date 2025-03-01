@@ -79,6 +79,7 @@ export default defineConfig({
       }),
       VitePWA({
         registerType: "autoUpdate", // Service Worker 版本更新策略
+        selfDestroying: false, // 是否在 Service Worker 安装完成后自毁
         manifest: {
           name: "gerry note site",
           short_name: "NoteSite",
