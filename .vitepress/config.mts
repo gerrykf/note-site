@@ -371,6 +371,14 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "浏览器的渲染原理",
               link: "/浏览器的渲染原理"
+            },
+            {
+              text: "Event Loop（事件循环）",
+              link: "/event-loop"
+            },
+            {
+              text: "手写Promise",
+              link: "/手写Promise"
             }
           ]
         },
@@ -575,6 +583,14 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "Proxy",
               link: "/proxy"
+            },
+            {
+              text: "Reflect",
+              link: "/reflect"
+            },
+            {
+              text: "Symbol",
+              link: "/symbol"
             }
           ]
         }
