@@ -130,6 +130,13 @@ function head(): HeadConfig[] {
     [
       "link",
       {
+        rel: "manifest",
+        href: "/note-site/manifest.json"
+      }
+    ],
+    [
+      "link",
+      {
         rel: "apple-touch-icon",
         sizes: "180x180",
         href: "/note-site/favicon-180x180.png"
