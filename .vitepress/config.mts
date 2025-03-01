@@ -379,6 +379,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "手写Promise",
               link: "/手写Promise"
+            },
+            {
+              text: "手写bind、apply、call",
+              link: "/手写bind-apply-call"
             }
           ]
         },
