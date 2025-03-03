@@ -3,7 +3,7 @@ name: Build and Deploy Site
 on:
   # 当 push 到 main 分支时触发
   push:
-    branches: ["main"]
+    branches: ["main"] # 监听 mian 分支提交
   # 允许手动触发工作流
   workflow_dispatch:
 
@@ -21,23 +21,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: 📥 拉取代码
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: 🔧 设置 Node.js 环境
         uses: actions/setup-node@v3
         with:
-          node-version: '18'   # 根据需要选择 Node.js 版本
+          node-version: "18" # 根据需要选择 Node.js 版本
 
-      - name: Install Dependencies
+      - name: 📦 安装依赖
         run: npm install
 
-      - name: Build Project
+      - name: 🚀 运行构建
         run: npm run docs:build
         # 此处假设你的构建命令会生成 dist 文件夹，
         # 且 dist/index.html 为入口页面
 
-      - name: Upload Artifact
+      - name: 📤 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -49,6 +49,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 🚀 部署到 Github Pages
         id: deployment
         uses: actions/deploy-pages@v4

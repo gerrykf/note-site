@@ -446,8 +446,16 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               collapsed: true,
               items: [
                 {
-                  text: "1.安装与运行",
+                  text: "安装与运行",
                   link: "/安装与运行"
+                },
+                {
+                  text: "Typescript入门详解",
+                  link: "/Typescript入门详解"
+                },
+                {
+                  text: "tsconfig.json配置详解",
+                  link: "/tsconfig.json配置详解"
                 }
               ]
             },
@@ -457,8 +465,8 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               collapsed: true,
               items: [
                 {
-                  text: "1.安装与运行",
-                  link: "/安装与运行"
+                  text: "TypeScript高阶详解",
+                  link: "/TypeScript高阶详解"
                 }
               ]
             }
