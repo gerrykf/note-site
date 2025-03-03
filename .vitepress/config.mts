@@ -81,7 +81,6 @@ export default defineConfig({
         outDir: "dist", // 指定输出目录
         base: "/note-site/", // 指定构建输出路径
         mode: "production", // 指定 PWA 的模式production
-        strategies: "injectManifest", // Service Worker 注入模式
         registerType: "autoUpdate", // Service Worker 版本更新策略
         selfDestroying: false, // 是否在 Service Worker 安装完成后自毁
         manifest: {
