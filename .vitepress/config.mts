@@ -78,6 +78,11 @@ export default defineConfig({
         ignore: [] // 这也是一个数组，你可以在这个数组中指定哪些页面不被搜索
       }),
       VitePWA({
+        outDir: "dist", // 指定输出目录
+        base: "/note-site/", // 指定构建输出路径
+        mode: "production", // 指定 PWA 的模式production
+        filename: "sw.js", // Service Worker 文件名
+        strategies: "injectManifest", // Service Worker 注入模式
         registerType: "autoUpdate", // Service Worker 版本更新策略
         selfDestroying: false, // 是否在 Service Worker 安装完成后自毁
         manifest: {
