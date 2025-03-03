@@ -1,4 +1,6 @@
 {
+  "appid": "com.gerry.note.site",
+  "version": "1.0.0",
   "name": "gerry note site",
   "short_name": "NoteSite",
   "start_url": "/note-site/",
