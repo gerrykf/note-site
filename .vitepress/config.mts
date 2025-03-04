@@ -663,13 +663,51 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: "微前端",
-      base: "/micro-frontend",
-      link: "/",
+      text: "架构师",
+      base: "/architect/",
+      collapsed: false,
       items: [
         {
-          text: "qiankun",
-          link: "/qiankun"
+          text: "企业级包管理方案",
+          base: "/architect/package-manage",
+          collapsed: true,
+          items: [
+            {
+              text: "npm进阶指令",
+              link: "/npm进阶指令"
+            },
+            {
+              text: "package描述文件",
+              link: "/package描述文件"
+            },
+            {
+              text: "发布npm包",
+              link: "/发布npm包"
+            },
+            {
+              text: "yarn&pnpm包管理器",
+              link: "/yarn&pnpm包管理器"
+            },
+            {
+              text: "monorepo&multirepo",
+              link: "/monorepo&multirepo"
+            },
+            {
+              text: "搭建Monorepo工程",
+              link: "/搭建Monorepo工程"
+            }
+          ]
+        },
+        {
+          text: "微前端",
+          base: "/architect/micro-frontend",
+          link: "/",
+          items: [
+            {
+              text: "qiankun",
+              link: "/qiankun"
+            }
+          ]
         }
       ]
     },
