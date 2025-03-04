@@ -85,6 +85,12 @@ features:
     link: /frontend/pinia/guide
 
   - icon:
+      src: /icon_leetcode.svg
+    title: LeetCode
+    details: 算法题目汇总
+    link: /stack/leetcode/leetcode
+
+  - icon:
       src: /icon_ai.svg
     title: AI大模型
     details: AI大模型汇总

@@ -658,6 +658,17 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
+      text: "微前端",
+      base: "/micro-frontend",
+      link: "/",
+      items: [
+        {
+          text: "qiankun",
+          link: "/qiankun"
+        }
+      ]
+    },
+    {
       text: "面试题",
       base: "/interview-qa/",
       items: [

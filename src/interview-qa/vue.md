@@ -23,8 +23,8 @@ Vue3相较于Vue2主要在以下几个方面:
 
 ### 1. **Composition API vs Options API**
 
-- Vue2 主要使用 Options API（`data`、`methods``computed` 等）
-- Vue3 引入了 Composition API（`setup`、`reactive``ref`、`computed`等）
+- Vue2 主要使用 Options API（`data`、`methods`、`computed` 等）
+- Vue3 引入了 Composition API（`setup`、`reactive` 、`ref`、`computed`等）
 
 ### 2. **响应式系统**
 
