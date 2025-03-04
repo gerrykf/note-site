@@ -654,6 +654,11 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               link: "/symbol"
             }
           ]
+        },
+        {
+          text: "🔗 设计模式",
+          base: "/stack/design-pattern",
+          link: "/"
         }
       ]
     },
