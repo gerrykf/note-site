@@ -665,7 +665,6 @@ function sidebar(): DefaultTheme.SidebarItem[] {
     {
       text: "架构师",
       base: "/architect/",
-      collapsed: false,
       items: [
         {
           text: "企业级包管理方案",
@@ -695,6 +694,14 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             {
               text: "搭建Monorepo工程",
               link: "/搭建Monorepo工程"
+            },
+            {
+              text: "搭建公司内部组件库",
+              link: "/搭建公司内部组件库"
+            },
+            {
+              text: "组件库打包与引用",
+              link: "/组件库打包与引用"
             }
           ]
         },
@@ -702,6 +709,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
           text: "微前端",
           base: "/architect/micro-frontend",
           link: "/",
+          collapsed: true,
           items: [
             {
               text: "qiankun",
