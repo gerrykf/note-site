@@ -723,10 +723,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       text: "面试题",
       base: "/interview-qa/",
       items: [
-        {
-          text: "总结",
-          link: "/总结"
-        },
+        // {
+        //   text: "总结",
+        //   link: "/总结"
+        // },
         {
           text: "HTML",
           link: "/html"
