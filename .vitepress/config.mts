@@ -704,7 +704,7 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               link: "/组件库打包与引用"
             }
           ]
-        },
+        }
         // {
         //   text: "微前端",
         //   base: "/architect/micro-frontend",
@@ -726,6 +726,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         {
           text: "总结",
           link: "/总结"
+        },
+        {
+          text: "HTML",
+          link: "/html"
         },
         {
           text: "Vue",
