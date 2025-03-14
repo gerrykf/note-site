@@ -1,29 +1,5 @@
 # Pinia 和 Vuex
 
-- [Pinia 和 Vuex](#pinia-和-vuex)
-  - [Pinia 面试题](#pinia-面试题)
-    - [1. Pinia 介绍](#1-pinia-介绍)
-    - [2. Pinia 的核心 API](#2-pinia-的核心-api)
-    - [3. Pinia 的基本使用](#3-pinia-的基本使用)
-    - [4. Pinia 状态持久化](#4-pinia-状态持久化)
-    - [5. Pinia  的 `storeToRefs`](#5-pinia--的-storetorefs)
-    - [6. Pinia 适用于哪些场景？](#6-pinia-适用于哪些场景)
-    - [7. Pinia 如何在 SSR（服务端渲染）中使用？](#7-pinia-如何在-ssr服务端渲染中使用)
-    - [8. Pinia 的模块化](#8-pinia-的模块化)
-    - [9. Pinia 如何监听 Store 变化？](#9-pinia-如何监听-store-变化)
-  - [Vuex 面试题](#vuex-面试题)
-    - [1. Vuex 是什么？为什么要使用 Vuex？](#1-vuex-是什么为什么要使用-vuex)
-    - [2. Vuex 的核心概念有哪些？](#2-vuex-的核心概念有哪些)
-    - [3. 如何使用 Vuex 创建一个 Store？](#3-如何使用-vuex-创建一个-store)
-    - [4. Vuex 的 state 如何获取？](#4-vuex-的-state-如何获取)
-    - [5. Vuex 的 getters 作用是什么？](#5-vuex-的-getters-作用是什么)
-    - [6. Vuex 的 mutations 和 actions 区别？](#6-vuex-的-mutations-和-actions-区别)
-    - [7. Vuex 的 modules 如何使用？](#7-vuex-的-modules-如何使用)
-    - [8. Vuex 如何实现持久化存储？](#8-vuex-如何实现持久化存储)
-    - [9. Vuex 4.x 和 Vuex 3.x 的区别？](#9-vuex-4x-和-vuex-3x-的区别)
-    - [10. Vue3 是否还推荐使用 Vuex？](#10-vue3-是否还推荐使用-vuex)
-  - [Pinia 和 Vuex 对比](#pinia-和-vuex-对比)
-
 ## Pinia 面试题
 
 ### 1. Pinia 介绍

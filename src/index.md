@@ -84,11 +84,11 @@ features:
     details: Pinia 是一个为 Vue 3 设计的状态管理库。
     link: /frontend/pinia/guide
 
-  - icon:
-      src: /icon_leetcode.svg
-    title: LeetCode
-    details: 算法题目汇总
-    link: /stack/leetcode/leetcode
+  # - icon:
+  #     src: /icon_leetcode.svg
+  #   title: LeetCode
+  #   details: 算法题目汇总
+  #   link: /stack/leetcode/leetcode
 
   - icon:
       src: /icon_ai.svg

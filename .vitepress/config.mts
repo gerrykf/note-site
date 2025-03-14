@@ -705,18 +705,18 @@ function sidebar(): DefaultTheme.SidebarItem[] {
             }
           ]
         },
-        {
-          text: "微前端",
-          base: "/architect/micro-frontend",
-          link: "/",
-          collapsed: true,
-          items: [
-            {
-              text: "qiankun",
-              link: "/qiankun"
-            }
-          ]
-        }
+        // {
+        //   text: "微前端",
+        //   base: "/architect/micro-frontend",
+        //   link: "/",
+        //   collapsed: true,
+        //   items: [
+        //     {
+        //       text: "qiankun",
+        //       link: "/qiankun"
+        //     }
+        //   ]
+        // }
       ]
     },
     {
