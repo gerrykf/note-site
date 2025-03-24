@@ -335,6 +335,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
                   link: "/CSS3的媒介(media)查询"
                 },
                 {
+                  text: "11.过渡与动画",
+                  link: "/过渡与动画"
+                },
+                {
                   text: "CSS预处理器",
                   link: "/sass"
                 }
@@ -730,6 +734,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
         {
           text: "HTML",
           link: "/html"
+        },
+        {
+          text: "CSS",
+          link: "/css"
         },
         {
           text: "Vue",

@@ -97,6 +97,48 @@ git revert [commit-id]
 git push [branch-name]
 ```
 
+## 场景：撤销合并
+
+### ✅ 情况一：合并后还没提交
+
+也就是说你只是合并了代码，但还没 git commit。
+
+✅ 解决方法：
+
+```bash
+git merge --abort
+```
+
+这个命令会取消正在进行的合并，回到合并前的状态。
+
+### ✅ 情况二：合并后已经提交了
+
+如果你已经执行了 git commit，那就需要使用 git reset。
+
+✅ 解决方法：
+查看历史提交：
+
+```bash
+git log --oneline
+```
+
+找到你合并之前的那一条 commit，比如：
+
+```sql
+abc1234 原来的提交信息
+def5678 Merge branch 'xxx'
+```
+
+回到那个合并前的 commit：
+
+```bash
+git reset --hard abc1234
+```
+
+⚠️ 注意：
+使用 --hard 会丢弃你当前工作区的更改（包括未提交的改动），要小心操作。
+如果你已经推送到远程仓库，并想撤销远程的合并，需要用 git push --force，但这要 非常小心，因为可能影响别人。
+
 ## git flow(工作流)
 
 1. 主分支

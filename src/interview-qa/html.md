@@ -117,14 +117,16 @@ iframe 是 HTML 中的一个内联框架，可以在一个 HTML 文档中嵌入�
 
 以前的写法：
 
-示例1：
+::: details 点击查看代码
 
 ```html
 <a href="http://www.example.com" class="url">www.example.com</a>
 <a href="http://www.about.com" class="url" >www.about.com</a>
 ```
 
-示例2：
+:::
+
+::: details 点击查看代码
 
 ```html
 <div>
@@ -133,16 +135,22 @@ iframe 是 HTML 中的一个内联框架，可以在一个 HTML 文档中嵌入�
 </div>
 ```
 
+:::
+
 微格式写法：
 
 示例1：
+
+::: details 点击查看代码
 
 ```html
 <a href="http://www.example.com" class="url" rel="homepage">www.example.com</a>
 <a href="http://www.about.com" class="url" rel="aboutpage">www.about.com</a>
 ```
 
+:::
 示例2：
+::: details 点击查看代码
 
 ```html
 <div class="vcard">
@@ -150,6 +158,8 @@ iframe 是 HTML 中的一个内联框架，可以在一个 HTML 文档中嵌入�
   <span class="tel">123456789</span>
 </div>
 ```
+
+:::
 
 通过为已有的链接添加 rel 属性，这个链接添加了具体的结构和意义。
 
@@ -209,6 +219,7 @@ iframe 是 HTML 中的一个内联框架，可以在一个 HTML 文档中嵌入�
 
 - `visibilitychange`：当页面可见性状态发生变化时触发
 - `visibilityState`：页面的可见性状态，有三个值：`visible`、`hidden`、`prerender`
+::: details 点击查看代码
 
 ```js
 document.addEventListener("visibilitychange", function() {
@@ -220,6 +231,7 @@ document.addEventListener("visibilitychange", function() {
 });
 ```
 
+:::
 常见用途：
 
 - 当页面不可见时，暂停视频播放、音频播放等
