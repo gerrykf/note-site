@@ -4,6 +4,7 @@ import { useRoute } from "vitepress";
 import mediumZoom from "medium-zoom";
 
 import "./index.css";
+import { useVersionCheck } from "./composables/useVersionCheck";
 
 export default {
   ...DefaultTheme,
@@ -15,6 +16,7 @@ export default {
     };
     onMounted(() => {
       initZoom();
+      useVersionCheck();
     });
     watch(
       () => route.path,
