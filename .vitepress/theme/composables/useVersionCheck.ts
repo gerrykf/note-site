@@ -1,6 +1,7 @@
 import { onMounted } from "vue";
 
 export function useVersionCheck() {
+  debugger;
   const currentVersion = __BUILD_DATE__;
 
   const checkVersion = async () => {
