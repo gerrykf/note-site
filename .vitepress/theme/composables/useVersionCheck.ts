@@ -11,7 +11,7 @@
  * 4.3. 如果用户选择刷新，记录当前版本号，并刷新页面。
  */
 export function useVersionCheck() {
-  const currentVersion = __BUILD_DATE__;
+  const currentVersion = __BUILD_DATE__; // vitepress中构建时会替换为当前的构建时间戳 viet配置中的变量
 
   const checkVersion = async () => {
     try {
