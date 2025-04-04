@@ -8,7 +8,7 @@
  * 4.如果远程版本号大于当前版本号，则弹出提示框，询问用户是否刷新页面。
  * 4.1. 如果用户选择刷新，则刷新页面。
  * 4.2. 刷新时增加一个标志，避免重复提示。
- * 4.3. 每次刷新页面时，都会清除提示标志。
+ * 4.3. 刷新后清除标志。
  */
 export function useVersionCheck() {
   const currentVersion = __BUILD_DATE__;
@@ -20,15 +20,18 @@ export function useVersionCheck() {
       });
       const data = await res.json();
       const remoteVersion = data.version;
-      const hasPrompted = localStorage.getItem("hasPrompted") === "true";
+      const lastPromptedVersion = localStorage.getItem("lastPromptedVersion");
+
+      const isNewVersion = Number(remoteVersion) > Number(currentVersion);
 
       // 如果远程版本号大于当前版本号，并且没有提示过，则弹出提示框
-      if (Number(remoteVersion) > Number(currentVersion) && !hasPrompted) {
+      if (isNewVersion && lastPromptedVersion !== remoteVersion) {
         localStorage.setItem("hasPrompted", "true"); // 设置标志，避免重复提示
 
         const refresh = confirm("检测到新版本，是否刷新页面以更新内容？");
         if (refresh) {
           location.reload();
+          localStorage.removeItem("hasPrompted"); // 刷新后清除标志
         }
       }
     } catch (err) {

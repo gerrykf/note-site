@@ -19,7 +19,6 @@ export default {
     onMounted(() => {
       initZoom();
 
-      localStorage.removeItem("hasPrompted");
       // 首次加载时检查版本
       checkVersion();
 
