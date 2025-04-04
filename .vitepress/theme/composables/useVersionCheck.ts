@@ -26,12 +26,12 @@ export function useVersionCheck() {
 
       // 如果远程版本号大于当前版本号，并且没有提示过，则弹出提示框
       if (isNewVersion && lastPromptedVersion !== remoteVersion) {
-        localStorage.setItem("hasPrompted", "true"); // 设置标志，避免重复提示
+        // 记录当前已提示过这个版本
+        localStorage.setItem("lastPromptedVersion", remoteVersion);
 
         const refresh = confirm("检测到新版本，是否刷新页面以更新内容？");
         if (refresh) {
           location.reload();
-          localStorage.removeItem("hasPrompted"); // 刷新后清除标志
         }
       }
     } catch (err) {
