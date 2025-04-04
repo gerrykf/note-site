@@ -6,7 +6,7 @@ export function useVersionCheck() {
 
   const checkVersion = async () => {
     try {
-      const res = await fetch("/version.json", {
+      const res = await fetch("/note-site/version.json", {
         headers: { "Cache-Control": "no-cache" }
       });
       const data = await res.json();
