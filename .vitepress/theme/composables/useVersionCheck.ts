@@ -8,6 +8,8 @@
  * 4.如果远程版本号大于当前版本号，则弹出提示框，询问用户是否刷新页面。
  */
 export function useVersionCheck() {
+  localStorage.removeItem("hasPrompted"); // 清除提示标志
+
   const currentVersion = __BUILD_DATE__;
 
   const checkVersion = async () => {
