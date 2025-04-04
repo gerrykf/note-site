@@ -11,13 +11,6 @@
  * 4.3. 每次刷新页面时，都会清除提示标志。
  */
 export function useVersionCheck() {
-  const isBrowser = typeof window !== "undefined";
-
-  // 只在浏览器环境清除提示标志
-  if (isBrowser) {
-    localStorage.removeItem("hasPrompted");
-  }
-
   const currentVersion = __BUILD_DATE__;
 
   const checkVersion = async () => {
