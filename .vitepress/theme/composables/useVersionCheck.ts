@@ -6,9 +6,8 @@
  * 2.构建时会生成一个version.json文件，里面包含了当前版本号。
  * 3.在页面加载时，会请求version.json文件，跟当前版本号进行对比。
  * 4.如果远程版本号大于当前版本号，则弹出提示框，询问用户是否刷新页面。
- * 4.1. 如果用户选择刷新，则刷新页面。
- * 4.2. 刷新时增加一个标志，避免重复提示。
- * 4.3. 刷新后清除标志。
+ * 4.1. 每次提示前都会检查localStorage中是否已经提示过这个版本，如果提示过，则不再提示。
+ * 4.2. 如果用户选择刷新，则刷新页面。
  */
 export function useVersionCheck() {
   const currentVersion = __BUILD_DATE__;
@@ -21,6 +20,13 @@ export function useVersionCheck() {
       const data = await res.json();
       const remoteVersion = data.version;
       const lastPromptedVersion = localStorage.getItem("lastPromptedVersion");
+      const lastSeenVersion = localStorage.getItem("lastSeenVersion"); // 第一次进入网站没有版本记录
+
+      // ✅ 如果是第一次进入网站，记录当前版本，不提示
+      if (!lastSeenVersion) {
+        localStorage.setItem("lastSeenVersion", currentVersion);
+        return;
+      }
 
       const isNewVersion = Number(remoteVersion) > Number(currentVersion);
 
