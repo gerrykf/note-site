@@ -1,12 +1,12 @@
-import { onMounted } from "vue";
-
+/**
+ * @description 版本检测
+ */
 export function useVersionCheck() {
-  debugger;
   const currentVersion = __BUILD_DATE__;
 
   const checkVersion = async () => {
     try {
-      const res = await fetch("/version.json?_t=" + Date.now(), {
+      const res = await fetch("/version.json", {
         headers: { "Cache-Control": "no-cache" }
       });
       const data = await res.json();
@@ -23,10 +23,7 @@ export function useVersionCheck() {
     }
   };
 
-  onMounted(() => {
-    // 首次加载时检查版本
-    checkVersion();
-
-    setInterval(checkVersion, 10 * 1000); // 每分钟检查一次
-  });
+  return {
+    checkVersion
+  };
 }
