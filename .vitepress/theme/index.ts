@@ -19,6 +19,9 @@ export default {
     onMounted(() => {
       initZoom();
 
+      // 首次加载时检查版本
+      checkVersion();
+
       setInterval(checkVersion, 10 * 1000); // 每分钟检查一次
     });
     watch(
