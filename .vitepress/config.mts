@@ -118,7 +118,10 @@ export default defineConfig({
           ]
         }
       })
-    ]
+    ],
+    define: {
+      __BUILD_DATE__: JSON.stringify(Date.now())
+    }
   },
   markdown: {
     image: {

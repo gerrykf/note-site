@@ -7,7 +7,7 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build && npm run postbuild",
     "docs:preview": "vitepress preview",
-    "postbuild": "node generate-sitemap.mjs"
+    "postbuild": "node generate-sitemap.mjs && node generate-version.mjs"
   },
   "repository": {
     "type": "git",
