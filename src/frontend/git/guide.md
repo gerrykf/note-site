@@ -137,7 +137,7 @@ git reset --hard abc1234
 
 ## 场景：忽略项目中某个文件到 git
 
-### ✅ 解决方法
+✅ 解决方法
 
 在项目根目录下创建一个名为 `.gitignore` 的文件，并在其中添加你想要忽略的文件或目录的路径。
 （在这个文件频繁改动下 建议忽略该文件，开发者在自己本地创建使用）
@@ -151,6 +151,27 @@ git reset --hard abc1234
 
 ```shell
 git rm --cached .env.development
+```
+
+## 场景：切换到某个版本
+
+✅ 解决方法
+
+```bash
+git checkout [commit-id]
+```
+
+这会让你切换到指定的 commit-id 版本。
+如果你想要回到最新的版本，可以使用：
+
+```bash
+git checkout master
+```
+
+或者
+
+```bash
+git checkout main
 ```
 
 ⚠️ 注意：
