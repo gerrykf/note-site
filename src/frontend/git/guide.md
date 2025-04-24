@@ -135,6 +135,24 @@ def5678 Merge branch 'xxx'
 git reset --hard abc1234
 ```
 
+## 场景：忽略项目中某个文件到 git
+
+### ✅ 解决方法
+
+在项目根目录下创建一个名为 `.gitignore` 的文件，并在其中添加你想要忽略的文件或目录的路径。
+（在这个文件频繁改动下 建议忽略该文件，开发者在自己本地创建使用）
+例如：
+
+```bash
+# 忽略 .env.development 文件 
+.env.development
+
+> 如果设置了没有生效 ,在git追踪中移除
+
+```shell
+git rm --cached .env.development
+```
+
 ⚠️ 注意：
 使用 --hard 会丢弃你当前工作区的更改（包括未提交的改动），要小心操作。
 如果你已经推送到远程仓库，并想撤销远程的合并，需要用 git push --force，但这要 非常小心，因为可能影响别人。
