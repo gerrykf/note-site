@@ -1,16 +1,16 @@
-# Vue3项目打包成docker镜像部署
+# Vue3 项目打包成 docker 镜像部署
 
 ## 1. 确保环境准备
 
 - 本地开发环境
   - Vue3 + Vite
-  - Docker 已安装（[点击这里查看docker安装](./guide.md)）
+  - Docker 已安装（[点击这里查看 docker 安装](./guide.md)）
   - Docker Compose（可选）
 - 服务器环境
   - 服务器已安装 Docker & Docker Compose
   - 域名
 
-确保docker desktop 已安装启动
+确保 docker desktop 已安装启动
 
 ```shell
 docker -v
@@ -217,7 +217,7 @@ docker run -d -p 80:80 --name vue3-container vue3-docker
 在项目根目录下创建 `docker-compose.yml` 文件
 
 ```yml
-version: '3'
+version: "3"
 services:
   vue-app:
     build: .
@@ -225,7 +225,6 @@ services:
     ports:
       - "8080:80"
     restart: always
-
 ```
 
 ### 9.2. 运行 Docker Compose
@@ -284,13 +283,13 @@ docker push harbor.example.com/vue3-app:latest
 
 ### 管道流程任务
 
-1. 使用 Node.js 生态系统 版本20.x
+1. 使用 Node.js 生态系统 版本 20.x
 2. `npm install -g pnpm` 安装 pnpm
 3. `pnpm install` 安装依赖
 4. `pnpm run build` 打包项目
-5. 复制dist文件到发布目录
-6. 复制nginx.conf文件到发布目录
-7. 复制Dockerfile文件到发布目录
+5. 复制 dist 文件到发布目录
+6. 复制 nginx.conf 文件到发布目录
+7. 复制 Dockerfile 文件到发布目录
 8. 发布项目
 
 ### 发布流程
@@ -299,35 +298,37 @@ docker push harbor.example.com/vue3-app:latest
 
 - 项目区域
 
-    1. 源类型 Build
-    2. 选择项目
-    3. 选择管道源
+  1. 源类型 Build
+  2. 选择项目
+  3. 选择管道源
 
 - 阶段区域
 
-    1. 添加阶段 选择Azure 应用服务部署
-    2. 查看阶段任务
-        - 在代理任务上点击+号 搜索 `Docker`
+  1. 添加阶段 选择 Azure 应用服务部署
+  2. 查看阶段任务
 
-            1. `docker login` 登录容器仓库
-                - 显示名称 `Login`
-                - 容器注册表 `harbor.example.com`
-                - 命令 `login`
-                - 将管道元数据添加到映像
-                - 将基本映像元数据添加到映像
+     - 在代理任务上点击+号 搜索 `Docker`
 
-            2. 构建&推送(buildAndPush)镜像
+       1. `docker login` 登录容器仓库
 
-                - 显示名称 `buildAndPush`
-                - 容器注册表 `harbor.example.com`
-                - 容器存储库 `vue3-app`
-                - 命令选择 `buildAndPush`
-                - 填写 `Dockerfile`文件路径
-                - 填写 `Context` 上下文路径（就是资源文件路径 例如：/dist）
-                - 将管道元数据添加到映像
-                - 将基本映像元数据添加到映像
+          - 显示名称 `Login`
+          - 容器注册表 `harbor.example.com`
+          - 命令 `login`
+          - 将管道元数据添加到映像
+          - 将基本映像元数据添加到映像
 
-## 将静态项目打包成docker镜像推送至harbor仓库
+       2. 构建&推送(buildAndPush)镜像
+
+          - 显示名称 `buildAndPush`
+          - 容器注册表 `harbor.example.com`
+          - 容器存储库 `vue3-app`
+          - 命令选择 `buildAndPush`
+          - 填写 `Dockerfile`文件路径
+          - 填写 `Context` 上下文路径（就是资源文件路径 例如：/dist）
+          - 将管道元数据添加到映像
+          - 将基本映像元数据添加到映像
+
+## 将静态项目打包成 docker 镜像推送至 harbor 仓库
 
 ### 📌 1. 确保你的静态页面目录结构
 
@@ -424,10 +425,98 @@ http://localhost:8080
 docker login harbor.yourcompany.com
 ```
 
-创建tag 并推送镜像
+创建 tag 并推送镜像
 
 ```shell
 docker tag my-static-site harbor.yourcompany.com/library/my-static-site:latest
 docker push harbor.yourcompany.com/library/my-static-site:latest
 
+```
+
+## 使用 WebStorm 推送 docker 镜像到 Harbor
+
+前置条件：
+
+1. 构建 dockerk 镜像
+
+```shell
+docker build -t vue3-app .
+```
+
+2. 构建后可以摘 docker desktop 查看镜像是否构建成功
+
+### 1. 打开 WebStorm
+
+拉取项目分支代码到最新
+
+```shell
+git pull origin master
+```
+
+打包 vue 项目
+
+```shell
+pnpm run build
+```
+
+### 2. 打开 Docker 文件
+
+```dockerfile
+# 使用官方 Nginx 作为基础镜像
+FROM nginx:alpine
+# 设定工作目录（Nginx 默认存放前端文件的位置）
+WORKDIR /usr/share/nginx/html
+# 删除默认的 Nginx 页面
+RUN rm -rf ./*
+# 复制 Vue 3 打包后的 dist 目录到容器中
+COPY dist /usr/share/nginx/html
+# 复制 Nginx 配置文件
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+# 暴露 Nginx 端口
+EXPOSE 80
+# 启动 Nginx
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+![alt text](image-5.png)
+
+### 3. 构建 Docker 镜像
+
+![alt text](image-6.png)
+
+编辑构建镜像的选项 填写命令
+
+1. 镜像标记：
+
+```
+harbor.cg1alias.com/cg/vue3_app_image:latest
+```
+
+2. 构建选项
+
+```
+--platform linux/amd64
+```
+
+3. Dockerfile 路径
+
+选择项目中的 `Dockerfile` 文件
+
+4. 应用(A)
+
+### 4. 构建镜像
+
+运行即可
+![alt text](image-6.png)
+
+### 5. 登录你的镜像管理台（如 Harbor）
+
+```
+docker login harbor.cg1alias.com
+```
+
+### 6. 推送镜像到 Harbor
+
+```shell
+docker push harbor.cg1alias.com/cg/vue3_app_image:latest
 ```
