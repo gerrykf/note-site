@@ -437,29 +437,7 @@ docker push harbor.yourcompany.com/library/my-static-site:latest
 
 前置条件：
 
-1. 构建 dockerk 镜像
-
-```shell
-docker build -t vue3-app .
-```
-
-2. 构建后可以摘 docker desktop 查看镜像是否构建成功
-
-### 1. 打开 WebStorm
-
-拉取项目分支代码到最新
-
-```shell
-git pull origin master
-```
-
-打包 vue 项目
-
-```shell
-pnpm run build
-```
-
-### 2. 打开 Docker 文件
+1. 保证项目中存在 `Dockerfile` 文件
 
 ```dockerfile
 # 使用官方 Nginx 作为基础镜像
@@ -478,9 +456,43 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-![alt text](image-5.png)
+2. 保证项目中存在 `nginx.conf` 文件
 
-### 3. 构建 Docker 镜像
+```config
+server {
+    listen 80;
+    server_name localhost;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html;
+        try_files $uri /index.html;
+    }
+}
+
+```
+
+```shell
+docker build -t vue3-app .
+```
+
+### 1. 打包 vue 项目
+
+拉取项目分支代码到最新
+
+```shell
+git pull origin master
+```
+
+打包 vue 项目
+
+```shell
+pnpm run build
+```
+
+### 2. 构建 Docker 镜像
+
+![alt text](image-5.png)
 
 ![alt text](image-6.png)
 
@@ -504,18 +516,20 @@ harbor.自己的域名.com/cg/vue3_app_image:latest
 
 4. 应用(A)
 
-### 4. 构建镜像
+5. 构建后可以摘 docker desktop 查看镜像是否构建成功`(可选)`
+
+### 3. 构建镜像
 
 运行即可
 ![alt text](image-6.png)
 
-### 5. 登录你的镜像管理台（如 Harbor）
+### 4. 登录你的镜像管理台（如 Harbor）
 
 ```
 docker login harbor.自己的域名.com
 ```
 
-### 6. 推送镜像到 Harbor
+### 5. 推送镜像到 Harbor
 
 ```shell
 docker push harbor.自己的域名.com/cg/vue3_app_image:latest
