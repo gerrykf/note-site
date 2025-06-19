@@ -489,7 +489,7 @@ CMD ["nginx", "-g", "daemon off;"]
 1. 镜像标记：
 
 ```
-harbor.cg1alias.com/cg/vue3_app_image:latest
+harbor.自己的域名.com/cg/vue3_app_image:latest
 ```
 
 2. 构建选项
@@ -512,11 +512,11 @@ harbor.cg1alias.com/cg/vue3_app_image:latest
 ### 5. 登录你的镜像管理台（如 Harbor）
 
 ```
-docker login harbor.cg1alias.com
+docker login harbor.自己的域名.com
 ```
 
 ### 6. 推送镜像到 Harbor
 
 ```shell
-docker push harbor.cg1alias.com/cg/vue3_app_image:latest
+docker push harbor.自己的域名.com/cg/vue3_app_image:latest
 ```
