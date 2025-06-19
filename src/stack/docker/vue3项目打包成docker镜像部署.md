@@ -417,7 +417,7 @@ docker run -d -p 8080:80 --name static-site my-static-site
 http://localhost:8080
 ```
 
-### 📌 6. 登录 Harbor 并推送镜像
+### 📌 7. 登录 Harbor 并推送镜像
 
 如果还未登录 Harbor，可以使用以下命令登录：
 
