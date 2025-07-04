@@ -421,6 +421,10 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               ]
             },
             {
+              text: "原形链一文讲通",
+              link: "/原形链一文讲通"
+            },
+            {
               text: "正则表达式",
               link: "/正则表达式"
             },
