@@ -526,7 +526,33 @@ function sidebar(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: "📦 Nodejs",
-          link: "/nodejs/nodejs"
+          collapsed: true,
+          base: "/backend/nodejs",
+          items: [
+            {
+              text: "nodejs学习全系列",
+              collapsed: true,
+              base: "/backend/nodejs/study-series",
+              items: [
+                {
+                  text: "1.介绍",
+                  link: "/chapter1"
+                },
+                {
+                  text: "2.安装",
+                  link: "/chapter2"
+                },
+                {
+                  text: "3.npm中package.json文件详解",
+                  link: "/chapter3"
+                }
+              ]
+            },
+            {
+              text: "博客系统个人项目",
+              link: "/blog-project/项目笔记"
+            }
+          ]
         }
       ]
     },
