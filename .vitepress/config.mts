@@ -745,6 +745,17 @@ function sidebar(): DefaultTheme.SidebarItem[] {
               link: "/组件库打包与引用"
             }
           ]
+        },
+        {
+          text: "vue3源码解读",
+          base: "/architect/vue3-source-code",
+          collapsed: true,
+          items: [
+            {
+              text: "monorepo项目工程",
+              link: "/monorepo"
+            }
+          ]
         }
         // {
         //   text: "微前端",
