@@ -501,7 +501,7 @@ pnpm run build
 1. 镜像标记：
 
 ```
-harbor.自己的域名.com/cg/vue3_app_image:latest
+harbor.自己的域名.com/xx/vue3_app_image:latest
 ```
 
 2. 构建选项
@@ -532,5 +532,5 @@ docker login harbor.自己的域名.com
 ### 5. 推送镜像到 Harbor
 
 ```shell
-docker push harbor.自己的域名.com/cg/vue3_app_image:latest
+docker push harbor.自己的域名.com/xx/vue3_app_image:latest
 ```
